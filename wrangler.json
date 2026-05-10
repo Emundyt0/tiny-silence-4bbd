@@ -1,14 +1,16 @@
 {
-  "name": "tiny-silence-4bbd",
-  "compatibility_date": "2025-04-01",
-  "compatibility_flags": ["nodejs_compat"],
-  "main": "./dist/_worker.js/index.js",
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  },
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "WORKER-NAME",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-04",
   "observability": {
     "enabled": true
   },
-  "upload_source_maps": true
+
+  // Add this to your wrangler.jsonc
+  "send_email": [
+    {
+      "name": "SEND_EMAIL"
+    }
+  ]
 }
